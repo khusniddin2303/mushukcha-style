@@ -1,0 +1,237 @@
+.categories-page {
+    padding-top: 20px;
+}
+
+.categories-sort-row {
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.categories-sort-row button {
+    border: none;
+    background: #fff0f7;
+    color: #ff4d94;
+    padding: 14px 24px;
+    border-radius: 999px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.22s ease;
+}
+
+.categories-sort-row button:hover {
+    transform: translateY(-2px);
+    background: #ffe3ef;
+}
+
+.categories-sort-row button.active {
+    background: #ff4d94;
+    color: white;
+    box-shadow: 0 14px 30px rgba(255, 95, 162, 0.24);
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 26px;
+}
+
+.category-page-card {
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+
+    min-height: 320px;
+    padding: 42px;
+
+    border-radius: 34px;
+
+    background:
+            radial-gradient(
+                    circle at top left,
+                    rgba(255,255,255,0.65),
+                    transparent 32%
+            ),
+
+            linear-gradient(
+                    135deg,
+                    #ffd9ea 0%,
+                    #ffeef6 48%,
+                    #fff7fb 100%
+            );
+
+    box-shadow:
+            0 10px 30px rgba(255, 105, 180, 0.08);
+
+    transition:
+            transform 0.35s ease,
+            box-shadow 0.35s ease;
+}
+
+.category-page-card:hover,
+.category-page-card:focus,
+.category-page-card:visited {
+    text-decoration: none;
+}
+
+.category-page-card * {
+    text-decoration: none;
+}
+
+.category-page-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 50px rgba(255, 105, 180, 0.16);
+}
+
+.category-card-bow {
+    position: absolute;
+
+    top: 16px;
+    left: 18px;
+
+    width: 190px;
+
+    opacity: 0.38;
+
+    pointer-events: none;
+
+}
+
+.category-card-cat {
+    position: absolute;
+
+    right: -45px;
+    bottom: -35px;
+
+    width: 300px;
+
+    opacity: 0.28;
+
+    pointer-events: none;
+}
+
+.category-card-sparkle {
+    position: absolute;
+
+    width: 70px;
+
+    opacity: 0.9;
+
+    pointer-events: none;
+}
+
+.sparkle-1 {
+    top: 42px;
+    right: 58px;
+}
+
+.sparkle-2 {
+    top: 105px;
+    right: 155px;
+}
+
+.sparkle-3 {
+    left: 38px;
+    bottom: 52px;
+}
+
+.category-page-card-1 {
+    background: linear-gradient(135deg, #ffd6e7, #fff0f7);
+}
+
+.category-page-card-2 {
+    background: linear-gradient(135deg, #ffcfe3, #ffe8f2);
+}
+
+.category-page-card-3 {
+    background: linear-gradient(135deg, #ffe1ee, #fff7fb);
+}
+
+.category-page-card-4 {
+    background: linear-gradient(135deg, #ffd9ea, #fff2f8);
+}
+
+
+
+.category-page-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.category-page-content p {
+    margin: 0 0 12px;
+    color: #ff4d94;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.category-page-content h3 {
+    margin: 0 0 22px;
+    color: #222;
+    font-size: 34px;
+}
+
+.category-page-content span {
+    color: #ff4d94;
+    font-weight: 900;
+}
+
+.categories-empty-state {
+    min-height: 260px;
+    border: 2px dashed #ffd3e5;
+    border-radius: 28px;
+    background: #fff8fb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.categories-empty-state h3 {
+    color: #ff4d94;
+}
+
+.categories-pagination {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.categories-pagination button {
+    width: 52px;
+    height: 52px;
+    border: 2px solid #ffc7dc;
+    border-radius: 18px;
+    background: white;
+    color: #ff4d94;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 10px 26px rgba(255, 95, 162, 0.14);
+    transition: 0.22s ease;
+}
+
+.categories-pagination button:hover:not(:disabled) {
+    background: #fff0f7;
+    border-color: #ff4d94;
+    transform: translateY(-3px);
+}
+
+.categories-pagination button.active {
+    background: #ff4d94;
+    color: white;
+    border-color: #ff4d94;
+}
+
+.categories-pagination button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    box-shadow: none;
+}

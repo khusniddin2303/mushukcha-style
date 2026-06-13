@@ -1,0 +1,120 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    width: 420px;
+    max-width: 95%;
+    text-align: center;
+}
+
+.modal h3 {
+    margin-bottom: 10px;
+    color: #ff5fa2;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal .password-field {
+    width: 100%;
+    margin: 15px 0 20px;
+}
+
+.modal .password-field input {
+    width: 100%;
+    height: 42px;
+    border: 1px solid #ffb6d2;
+    border-radius: 12px;
+    padding: 0 45px 0 14px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.modal .password-eye { right: 14px; }
+
+.reactEasyCrop_Container img,
+.reactEasyCrop_Image {
+    border-radius: 0 !important;
+}
+
+.modal .reactEasyCrop_Container img {
+    border-radius: 0 !important;
+    width: auto !important;
+    height: auto !important;
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    width: 420px;
+    max-width: 95%;
+    text-align: center;
+}
+
+.modal h3 {
+    margin-bottom: 10px;
+    color: #ff5fa2;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal .password-field {
+    width: 100%;
+    margin: 15px 0 20px;
+}
+
+.modal .password-field input {
+    width: 100%;
+    height: 42px;
+    border: 1px solid #ffb6d2;
+    border-radius: 12px;
+    padding: 0 45px 0 14px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.modal .password-eye { right: 14px; }
+
+.reactEasyCrop_Container img,
+.reactEasyCrop_Image {
+    border-radius: 0 !important;
+}
+
+.modal .reactEasyCrop_Container img {
+    border-radius: 0 !important;
+    width: auto !important;
+    height: auto !important;
+}

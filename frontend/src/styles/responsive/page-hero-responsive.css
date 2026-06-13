@@ -1,0 +1,334 @@
+/* ==================================================
+   COMMON PAGE HERO RESPONSIVE
+   For PageHero.jsx on Products/Categories/News/About/etc.
+   ================================================== */
+
+@media (max-width: 991px) {
+    .page-hero {
+        min-height: 230px;
+        margin: 18px auto 34px;
+        padding: 44px 24px 34px;
+    }
+
+    .page-hero h1 {
+        font-size: 42px;
+        line-height: 1.08;
+    }
+
+    .page-hero-text {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .page-hero-bow {
+        width: 120px;
+    }
+
+    .page-hero-cat {
+        width: 190px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero {
+        min-height: 205px;
+        margin: 16px auto 30px;
+        padding: 38px 20px 30px;
+        border-radius: 32px;
+    }
+
+    .page-hero h1 {
+        font-size: 36px;
+    }
+
+    .page-hero-text {
+        max-width: 430px;
+        font-size: 14px;
+    }
+
+    .page-hero-bow {
+        width: 105px;
+        opacity: 0.25;
+    }
+
+    .page-hero-cat {
+        width: 165px;
+        opacity: 0.23;
+    }
+}
+
+@media (max-width: 615px) {
+    .page-hero {
+        min-height: 185px;
+        padding: 32px 16px 25px;
+        border-radius: 28px;
+    }
+
+    .page-hero-kicker {
+        margin-bottom: 10px;
+        padding: 7px 15px;
+        font-size: 9px;
+    }
+
+    .page-hero h1 {
+        max-width: 420px;
+        margin: 0 auto;
+        font-size: 30px;
+        line-height: 1.12;
+    }
+
+    .page-hero-divider {
+        margin: 14px auto 12px;
+    }
+
+    .page-hero-text {
+        max-width: 360px;
+        font-size: 13px;
+    }
+
+    .page-hero-bow {
+        width: 88px;
+        left: -10px;
+    }
+
+    .page-hero-cat {
+        width: 135px;
+        right: -20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-hero {
+        min-height: 170px;
+        margin: 14px auto 22px;
+        padding: 28px 14px 22px;
+        border-radius: 26px;
+    }
+
+    .page-hero-kicker {
+        padding: 6px 13px;
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .page-hero-kicker img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .page-hero h1 {
+        max-width: 260px;
+        font-size: 25px;
+        line-height: 1.12;
+        letter-spacing: -0.6px;
+    }
+
+    .page-hero h1 span {
+        display: block;
+    }
+
+    .page-hero-title-heart {
+        display: none;
+    }
+
+    .page-hero-divider {
+        margin: 13px auto 12px;
+        gap: 9px;
+    }
+
+    .page-hero-divider span {
+        width: 42px;
+        height: 2px;
+    }
+
+    .page-hero-divider img {
+        width: 24px;
+    }
+
+    .page-hero-text {
+        max-width: 245px;
+        font-size: 12px;
+        line-height: 1.45;
+    }
+
+    .page-hero-bow {
+        width: 78px;
+        left: -8px;
+        top: 42px;
+        opacity: 0.22;
+    }
+
+    .page-hero-cat {
+        width: 120px;
+        right: -22px;
+        top: 58%;
+        opacity: 0.2;
+    }
+
+    .page-hero-heart {
+        display: none;
+    }
+
+    .page-hero-sparkle {
+        width: 28px !important;
+        opacity: 0.35;
+    }
+
+    .page-hero-sparkle-4,
+    .page-hero-sparkle-7,
+    .page-hero-sparkle-8,
+    .page-hero-sparkle-9,
+    .page-hero-sparkle-10,
+    .page-hero-sparkle-11,
+    .page-hero-sparkle-12 {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .page-hero {
+        min-height: 165px;
+        padding: 25px 12px 20px;
+    }
+
+    .page-hero h1 {
+        max-width: 240px;
+        font-size: 23px;
+    }
+
+    .page-hero-text {
+        max-width: 230px;
+        font-size: 11.5px;
+    }
+
+    .page-hero-bow {
+        width: 68px;
+    }
+
+    .page-hero-cat {
+        width: 105px;
+    }
+}
+/* Hide extra hero decorations on tablet/mobile */
+@media (max-width: 738px) {
+    .page-hero-heart,
+    .page-hero-title-heart {
+        display: none !important;
+    }
+
+    .page-hero-sparkle {
+        width: 18px !important;
+        opacity: 0.18 !important;
+    }
+
+    .page-hero-sparkle-3,
+    .page-hero-sparkle-4,
+    .page-hero-sparkle-5,
+    .page-hero-sparkle-6,
+    .page-hero-sparkle-7,
+    .page-hero-sparkle-8,
+    .page-hero-sparkle-9,
+    .page-hero-sparkle-10,
+    .page-hero-sparkle-11,
+    .page-hero-sparkle-12 {
+        display: none !important;
+    }
+
+    .page-hero h1,
+    .page-hero-text {
+        position: relative;
+        z-index: 5;
+    }
+}
+
+/* ==================================================
+   PAGE HERO LANGUAGE FIX
+   RU / UZ longer text support
+   ================================================== */
+
+.page-ru .page-hero h1,
+.page-uz .page-hero h1 {
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.08;
+}
+
+.page-ru .page-hero-text,
+.page-uz .page-hero-text {
+    max-width: 620px;
+}
+
+@media (max-width: 991px) {
+    .page-ru .page-hero h1,
+    .page-uz .page-hero h1 {
+        max-width: 620px;
+        font-size: 38px;
+        line-height: 1.12;
+    }
+
+    .page-ru .page-hero-text,
+    .page-uz .page-hero-text {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-ru .page-hero h1,
+    .page-uz .page-hero h1 {
+        max-width: 540px;
+        font-size: 32px;
+        line-height: 1.14;
+    }
+
+    .page-ru .page-hero-text,
+    .page-uz .page-hero-text {
+        max-width: 430px;
+        line-height: 1.55;
+    }
+}
+
+@media (max-width: 615px) {
+    .page-ru .page-hero h1,
+    .page-uz .page-hero h1 {
+        max-width: 360px;
+        font-size: 26px;
+        line-height: 1.15;
+    }
+
+    .page-ru .page-hero-text,
+    .page-uz .page-hero-text {
+        max-width: 330px;
+        font-size: 12.5px;
+        line-height: 1.45;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-ru .page-hero h1,
+    .page-uz .page-hero h1 {
+        max-width: 280px;
+        font-size: 23px;
+        line-height: 1.14;
+    }
+
+    .page-ru .page-hero-text,
+    .page-uz .page-hero-text {
+        max-width: 250px;
+        font-size: 11.5px;
+    }
+}
+
+@media (max-width: 400px) {
+    .page-ru .page-hero h1,
+    .page-uz .page-hero h1 {
+        max-width: 250px;
+        font-size: 21px;
+    }
+
+    .page-ru .page-hero-text,
+    .page-uz .page-hero-text {
+        max-width: 230px;
+        font-size: 11px;
+    }
+}

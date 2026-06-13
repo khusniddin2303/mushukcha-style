@@ -1,0 +1,66 @@
+.dashboard-page {
+    background: white;
+    padding: 24px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.dashboard-subtitle {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.dashboard-stats {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.dashboard-card {
+    flex: 1;
+    padding: 20px;
+    border-radius: 16px;
+    background: #fff0f6;
+    border: 1px solid #ffe0ec;
+}
+
+.dashboard-card h3 {
+    font-size: 32px;
+    margin: 0;
+    color: #ff4d8d;
+}
+
+.dashboard-card p {
+    margin: 6px 0 0;
+    color: #555;
+}
+
+.dashboard-recent {
+    margin-top: 20px;
+}
+
+.dashboard-recent-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border: 1px solid #ffe0ec;
+    border-radius: 14px;
+    margin-bottom: 10px;
+}
+
+.dashboard-recent-row img,
+.dashboard-product-placeholder {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    object-fit: cover;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-recent-row div { flex: 1; }
+.dashboard-recent-row p { margin: 3px 0 0; color: #888; font-size: 13px; }
+.dashboard-recent-row span { font-weight: 700; }

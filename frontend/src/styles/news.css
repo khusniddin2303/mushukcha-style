@@ -1,0 +1,108 @@
+.news-page {
+    padding-top: 20px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 28px;
+}
+
+.news-card {
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 16px 40px rgba(255, 95, 162, 0.12);
+    transition: 0.28s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 56px rgba(255, 95, 162, 0.2);
+}
+
+.news-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.news-card-content {
+    padding: 26px;
+}
+
+.news-card-content p {
+    margin: 0 0 12px;
+    color: #ff4d94;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.news-card-content h3 {
+    margin: 0 0 18px;
+    color: #222;
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.news-card-content span {
+    color: #ff4d94;
+    font-weight: 900;
+}
+
+.news-empty-state {
+    min-height: 260px;
+    border: 2px dashed #ffd3e5;
+    border-radius: 28px;
+    background: #fff8fb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.news-empty-state h3 {
+    color: #ff4d94;
+}
+
+.news-pagination {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.news-pagination button {
+    width: 52px;
+    height: 52px;
+    border: 2px solid #ffc7dc;
+    border-radius: 18px;
+    background: white;
+    color: #ff4d94;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 10px 26px rgba(255, 95, 162, 0.14);
+    transition: 0.22s ease;
+}
+
+.news-pagination button:hover:not(:disabled) {
+    background: #fff0f7;
+    border-color: #ff4d94;
+    transform: translateY(-3px);
+}
+
+.news-pagination button.active {
+    background: #ff4d94;
+    color: white;
+    border-color: #ff4d94;
+}
+
+.news-pagination button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    box-shadow: none;
+}

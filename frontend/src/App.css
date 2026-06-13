@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes...");
+
+@import "./styles/global.css";
+@import "./styles/components.css";
+@import "./styles/forms.css";
+@import "./styles/modal.css";
+@import "./styles/homepage.css";
+@import "./styles/page-hero.css";
+@import "./styles/product-page.css";
+@import "./styles/admin.css";
+@import "./styles/dashboard.css";
+
+/* Responsive styles */
+@import "./styles/responsive/navbar-responsive.css";
+@import "./styles/responsive/page-hero-responsive.css";
+@import "./styles/responsive/homepage-responsive.css";
+@import "./styles/responsive/product-responsive.css";
+@import "./styles/responsive/products-responsive.css";
+@import "./styles/responsive/categories-responsive.css";
+@import "./styles/responsive/news-responsive.css";
+@import "./styles/responsive/about-responsive.css";
+@import "./styles/responsive/admin-responsive.css";
+@import "./styles/responsive/footer-responsive.css";
