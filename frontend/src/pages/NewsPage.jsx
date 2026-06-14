@@ -11,7 +11,7 @@ function NewsPage({ heroT, pageT, language }) {
     const productsPerPage = 6;
 
     useEffect(() => {
-        fetch("http://localhost:8080/products/new-arrivals")
+        fetch("https://mushukcha-style-backend.onrender.com/products/new-arrivals")
             .then((res) => res.json())
             .then((data) => setNewsProducts(data || []))
             .catch(() => setNewsProducts([]));
@@ -52,7 +52,7 @@ function NewsPage({ heroT, pageT, language }) {
                                 <img
                                     src={
                                         product.imageUrl
-                                            ? `http://localhost:8080${product.imageUrl}`
+                                            ? `https://mushukcha-style-backend.onrender.com${product.imageUrl}`
                                             : "/no-image.png"
                                     }
                                     alt={product.name}

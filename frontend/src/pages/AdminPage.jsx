@@ -141,7 +141,7 @@ function AdminPage() {
     };
 
     const loadCurrentUser = () => {
-        fetch("http://localhost:8080/admin/users/me", {
+        fetch("https://mushukcha-style-backend.onrender.com/admin/users/me", {
             headers: getAuthHeaders(),
         })
             .then(handleAuthResponse)
@@ -162,7 +162,7 @@ function AdminPage() {
     };
 
     const loadAdmins = () => {
-        fetch("http://localhost:8080/admin/users", {
+        fetch("https://mushukcha-style-backend.onrender.com/admin/users", {
             headers: getAuthHeaders(),
         })
             .then(handleAuthResponse)
@@ -189,7 +189,7 @@ function AdminPage() {
             params.append("categoryId", filterCategoryId);
         }
 
-        fetch(`http://localhost:8080/products?${params.toString()}`)
+        fetch(`https://mushukcha-style-backend.onrender.com/products?${params.toString()}`)
             .then((res) => res.json())
             .then((data) => {
                 setAdminProducts(data.items || []);
@@ -207,7 +207,7 @@ function AdminPage() {
         params.append("size", "5");
         params.append("sort", "newest");
 
-        fetch(`http://localhost:8080/products?${params.toString()}`)
+        fetch(`https://mushukcha-style-backend.onrender.com/products?${params.toString()}`)
             .then((res) => res.json())
             .then((data) => {
                 setRecentProducts(data.items || []);
@@ -216,7 +216,7 @@ function AdminPage() {
     };
 
     const loadCategories = () => {
-        fetch("http://localhost:8080/categories")
+        fetch("https://mushukcha-style-backend.onrender.com/categories")
             .then((res) => res.json())
             .then((data) => setAdminCategories(data))
             .catch(() => toast.error("Failed to load categories"));
@@ -232,7 +232,7 @@ function AdminPage() {
             }
 
             try {
-                const res = await fetch("http://localhost:8080/admin/users/me", {
+                const res = await fetch("https://mushukcha-style-backend.onrender.com/admin/users/me", {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -272,7 +272,7 @@ function AdminPage() {
     }, [isLoggedIn]);
 
     const handleLogin = () => {
-        fetch("http://localhost:8080/admin/login", {
+        fetch("https://mushukcha-style-backend.onrender.com/admin/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ username, password }),
@@ -333,7 +333,7 @@ function AdminPage() {
         const formData = new FormData();
         formData.append("file", file);
 
-        const uploadRes = await fetch("http://localhost:8080/admin/upload", {
+        const uploadRes = await fetch("https://mushukcha-style-backend.onrender.com/admin/upload", {
             method: "POST",
             headers: getAuthHeaders(),
             body: formData,
@@ -349,7 +349,7 @@ function AdminPage() {
             return false;
         }
 
-        const avatarRes = await fetch(`http://localhost:8080/admin/users/${currentUserId}/avatar`, {
+        const avatarRes = await fetch(`https://mushukcha-style-backend.onrender.com/admin/users/${currentUserId}/avatar`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -402,7 +402,7 @@ function AdminPage() {
 
         setLoadingAction("updateProfile");
 
-        fetch(`http://localhost:8080/admin/users/${currentUserId}/profile`, {
+        fetch(`https://mushukcha-style-backend.onrender.com/admin/users/${currentUserId}/profile`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -470,7 +470,7 @@ function AdminPage() {
 
         setLoadingAction("deleteAdmin");
 
-        fetch(`http://localhost:8080/admin/users/${deleteTarget.id}`, {
+        fetch(`https://mushukcha-style-backend.onrender.com/admin/users/${deleteTarget.id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
@@ -527,7 +527,7 @@ function AdminPage() {
 
         setLoadingAction("addAdmin");
 
-        fetch("http://localhost:8080/admin/users", {
+        fetch("https://mushukcha-style-backend.onrender.com/admin/users", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -572,7 +572,7 @@ function AdminPage() {
             return;
         }
 
-        fetch("http://localhost:8080/admin/categories", {
+        fetch("https://mushukcha-style-backend.onrender.com/admin/categories", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -601,7 +601,7 @@ function AdminPage() {
     };
 
     const toggleFeaturedCategory = (id) => {
-        fetch(`http://localhost:8080/categories/${id}/featured`, {
+        fetch(`https://mushukcha-style-backend.onrender.com/categories/${id}/featured`, {
             method: "PUT",
             headers: {
                 ...getAuthHeaders(),
@@ -630,7 +630,7 @@ function AdminPage() {
 
         setLoadingAction("deleteCategory");
 
-        fetch(`http://localhost:8080/admin/categories/${categoryDeleteTarget.id}`, {
+        fetch(`https://mushukcha-style-backend.onrender.com/admin/categories/${categoryDeleteTarget.id}`, {
             method: "DELETE",
             headers: getAuthHeaders(),
         })
@@ -665,7 +665,7 @@ function AdminPage() {
 
         setLoadingAction("updateCategory");
 
-        fetch(`http://localhost:8080/admin/categories/${editingCategoryId}`, {
+        fetch(`https://mushukcha-style-backend.onrender.com/admin/categories/${editingCategoryId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -741,7 +741,7 @@ function AdminPage() {
                     formData.append("file", selectedProductFile, selectedProductFile.name);
                 }
 
-                const uploadRes = await fetch("http://localhost:8080/admin/upload", {
+                const uploadRes = await fetch("https://mushukcha-style-backend.onrender.com/admin/upload", {
                     method: "POST",
                     headers: getAuthHeaders(),
                     body: formData,
@@ -765,8 +765,8 @@ function AdminPage() {
             }
 
             const url = editingProductId
-                ? `http://localhost:8080/admin/products/${editingProductId}`
-                : "http://localhost:8080/admin/products";
+                ? `https://mushukcha-style-backend.onrender.com/admin/products/${editingProductId}`
+                : "https://mushukcha-style-backend.onrender.com/admin/products";
 
             const method = editingProductId ? "PUT" : "POST";
 
@@ -832,7 +832,7 @@ function AdminPage() {
 
         setLoadingAction("deleteProduct");
 
-        fetch(`http://localhost:8080/admin/products/${productDeleteTarget.id}`, {
+        fetch(`https://mushukcha-style-backend.onrender.com/admin/products/${productDeleteTarget.id}`, {
             method: "DELETE",
             headers: getAuthHeaders(),
         })
@@ -909,7 +909,7 @@ function AdminPage() {
             <aside className={sidebarOpen ? "admin-sidebar open" : "admin-sidebar"}>
                 <div className="sidebar-user">
                     {avatarUrl ? (
-                        <img src={`http://localhost:8080${avatarUrl}`} alt="Admin avatar" />
+                        <img src={`https://mushukcha-style-backend.onrender.com${avatarUrl}`} alt="Admin avatar" />
                     ) : (
                         <div className="sidebar-avatar-placeholder">👤</div>
                     )}
@@ -977,7 +977,7 @@ function AdminPage() {
                                     <div className="dashboard-recent-row" key={product.id}>
                                         {product.imageUrl ? (
                                             <img
-                                                src={`http://localhost:8080${product.imageUrl}`}
+                                                src={`https://mushukcha-style-backend.onrender.com${product.imageUrl}`}
                                                 alt={product.name}
                                             />
                                         ) : (
@@ -1006,7 +1006,7 @@ function AdminPage() {
 
                                 <div className="profile-main-avatar">
                                     {avatarUrl ? (
-                                        <img src={`http://localhost:8080${avatarUrl}`} alt="avatar" />
+                                        <img src={`https://mushukcha-style-backend.onrender.com${avatarUrl}`} alt="avatar" />
                                     ) : (
                                         <div className="profile-avatar-placeholder">👤</div>
                                     )}
@@ -1054,7 +1054,7 @@ function AdminPage() {
                                 <div className="profile-main-avatar">
                                     {avatarPreview || avatarUrl ? (
                                         <img
-                                            src={avatarPreview ? avatarPreview : `http://localhost:8080${avatarUrl}`}
+                                            src={avatarPreview ? avatarPreview : `https://mushukcha-style-backend.onrender.com${avatarUrl}`}
                                             alt="avatar"
                                         />
                                     ) : (
@@ -1116,7 +1116,7 @@ function AdminPage() {
                                         <div className="admin-user-info">
                                             {admin.avatarUrl ? (
                                                 <img
-                                                    src={`http://localhost:8080${admin.avatarUrl}`}
+                                                    src={`https://mushukcha-style-backend.onrender.com${admin.avatarUrl}`}
                                                     alt="avatar"
                                                     className="admin-avatar"
                                                 />
@@ -1424,7 +1424,7 @@ function AdminPage() {
 
                             {imageUrl && (
                                 <img
-                                    src={selectedProductFile ? imageUrl : `http://localhost:8080${imageUrl}`}
+                                    src={selectedProductFile ? imageUrl : `https://mushukcha-style-backend.onrender.com${imageUrl}`}
                                     alt="Preview"
                                     className="admin-image-preview"
                                 />
@@ -1481,7 +1481,7 @@ function AdminPage() {
                                         <div className="product-row-left">
                                             {product.imageUrl ? (
                                                 <img
-                                                    src={`http://localhost:8080${product.imageUrl}`}
+                                                    src={`https://mushukcha-style-backend.onrender.com${product.imageUrl}`}
                                                     className="admin-product-image"
                                                     alt={product.name}
                                                 />

@@ -41,21 +41,21 @@ function HomePage({ t, language }) {
     }, [slides.length]);
 
     useEffect(() => {
-        fetch("http://localhost:8080/products/new-arrivals")
+        fetch("https://mushukcha-style-backend.onrender.com/products/new-arrivals")
             .then((res) => res.json())
             .then((data) => setNewProducts(data || []))
             .catch(() => setNewProducts([]));
     }, []);
 
     useEffect(() => {
-        fetch("http://localhost:8080/categories/featured")
+        fetch("https://mushukcha-style-backend.onrender.com/categories/featured")
             .then((res) => res.json())
             .then((data) => setCategories(data || []))
             .catch(() => setCategories([]));
     }, []);
 
     useEffect(() => {
-        fetch("http://localhost:8080/categories")
+        fetch("https://mushukcha-style-backend.onrender.com/categories")
             .then((res) => res.json())
             .then((data) => setAllCategories(data || []))
             .catch(() => setAllCategories([]));
@@ -298,7 +298,7 @@ function HomePage({ t, language }) {
                                     <img
                                         src={
                                             product.imageUrl
-                                                ? `http://localhost:8080${product.imageUrl}`
+                                                ? `https://mushukcha-style-backend.onrender.com${product.imageUrl}`
                                                 : "/no-image.png"
                                         }
                                         alt={product.name}

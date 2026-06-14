@@ -10,7 +10,7 @@ function CategoriesPage({ heroT, pageT, language }) {
     const categoriesPerPage = 6;
 
     useEffect(() => {
-        fetch("http://localhost:8080/categories")
+        fetch("https://mushukcha-style-backend.onrender.com/categories")
             .then((res) => res.json())
             .then((data) => setCategories(data))
             .catch(() => setCategories([]));

@@ -29,7 +29,7 @@ function ProductsPage({ heroT, pageT, language }) {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch("http://localhost:8080/categories")
+        fetch("https://mushukcha-style-backend.onrender.com/categories")
             .then((res) => res.json())
             .then((data) => setCategories(data))
             .catch(() => setCategories([]));
@@ -65,7 +65,7 @@ function ProductsPage({ heroT, pageT, language }) {
 
         setLoading(true);
 
-        fetch(`http://localhost:8080/products?${params.toString()}`)
+        fetch(`https://mushukcha-style-backend.onrender.com/products?${params.toString()}`)
             .then((res) => res.json())
             .then((data) => {
                 setProducts(data.items || []);
@@ -215,7 +215,7 @@ function ProductsPage({ heroT, pageT, language }) {
                                 <img
                                     src={
                                         product.imageUrl
-                                            ? `http://localhost:8080${product.imageUrl}`
+                                            ? `https://mushukcha-style-backend.onrender.com${product.imageUrl}`
                                             : "/no-image.png"
                                     }
                                     alt={product.name}
