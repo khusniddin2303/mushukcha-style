@@ -54,6 +54,7 @@ public class SecurityConfig {
                 new org.springframework.web.cors.CorsConfiguration();
 
         configuration.addAllowedOrigin("http://localhost:5173");
+        configuration.addAllowedOrigin("https://mushukcha-style.vercel.app");
         configuration.addAllowedHeader("*");
         configuration.addAllowedMethod("*");
         configuration.setAllowCredentials(true);
