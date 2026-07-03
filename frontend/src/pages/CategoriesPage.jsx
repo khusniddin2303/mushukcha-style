@@ -4,13 +4,14 @@ import "../styles/categories.css";
 import PageHero from "../components/PageHero";
 
 function CategoriesPage({ heroT, pageT, language }) {
+    const API_URL = import.meta.env.VITE_API_URL;
     const [categories, setCategories] = useState([]);
     const [currentPage, setCurrentPage] = useState(0);
     const [sortType, setSortType] = useState("newest");
     const categoriesPerPage = 6;
 
     useEffect(() => {
-        fetch("https://mushukcha-style-backend.onrender.com/categories")
+        fetch(`${API_URL}/categories`)
             .then((res) => res.json())
             .then((data) => setCategories(data))
             .catch(() => setCategories([]));

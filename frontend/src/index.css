@@ -42,6 +42,17 @@ body {
   color-scheme: light;
 }
 
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  overflow-x: hidden;
+}
+
 input,
 textarea,
 select,

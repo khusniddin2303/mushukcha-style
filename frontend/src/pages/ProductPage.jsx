@@ -4,6 +4,8 @@ import { FaSearchPlus } from "react-icons/fa";
 import { FaInstagram, FaTelegramPlane, FaPhoneAlt } from "react-icons/fa";
 
 function ProductPage({ pageT, language }) {
+
+    const API_URL = import.meta.env.VITE_API_URL;
     const [product, setProduct] = useState(null);
     const [zoomOpen, setZoomOpen] = useState(false);
     const [zoomLevel, setZoomLevel] = useState(1);
@@ -32,7 +34,7 @@ function ProductPage({ pageT, language }) {
     };
 
     useEffect(() => {
-        fetch(`https://mushukcha-style-backend.onrender.com/products/${id}`)
+        fetch(`${API_URL}/products/${id}`)
             .then((res) => res.json())
             .then((data) => setProduct(data));
     }, [id]);
@@ -61,7 +63,7 @@ function ProductPage({ pageT, language }) {
                         <img
                             src={
                                 product.imageUrl
-                                    ? `https://mushukcha-style-backend.onrender.com${product.imageUrl}`
+                                    ? `${API_URL}${product.imageUrl}`
                                     : "/no-image.png"
                             }
                             alt={product.name}
@@ -191,7 +193,7 @@ function ProductPage({ pageT, language }) {
                         <img
                             src={
                                 product.imageUrl
-                                    ? `https://mushukcha-style-backend.onrender.com${product.imageUrl}`
+                                    ? `${API_URL}${product.imageUrl}`
                                     : "/no-image.png"
                             }
                             alt={product.name}

@@ -7,6 +7,7 @@ import { FaSearch, FaSlidersH } from "react-icons/fa";
 
 
 function ProductsPage({ heroT, pageT, language }) {
+    const API_URL = import.meta.env.VITE_API_URL;
     const [products, setProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(0);
     const [totalPages, setTotalPages] = useState(0);
@@ -29,7 +30,7 @@ function ProductsPage({ heroT, pageT, language }) {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch("https://mushukcha-style-backend.onrender.com/categories")
+        fetch(`${API_URL}/categories`)
             .then((res) => res.json())
             .then((data) => setCategories(data))
             .catch(() => setCategories([]));
@@ -65,7 +66,7 @@ function ProductsPage({ heroT, pageT, language }) {
 
         setLoading(true);
 
-        fetch(`https://mushukcha-style-backend.onrender.com/products?${params.toString()}`)
+        fetch(`${API_URL}/products?${params.toString()}`)
             .then((res) => res.json())
             .then((data) => {
                 setProducts(data.items || []);
@@ -215,7 +216,7 @@ function ProductsPage({ heroT, pageT, language }) {
                                 <img
                                     src={
                                         product.imageUrl
-                                            ? `https://mushukcha-style-backend.onrender.com${product.imageUrl}`
+                                            ? `${API_URL}${product.imageUrl}`
                                             : "/no-image.png"
                                     }
                                     alt={product.name}

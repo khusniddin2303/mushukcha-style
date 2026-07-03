@@ -4,6 +4,8 @@ import "../styles/news.css";
 import PageHero from "../components/PageHero";
 
 function NewsPage({ heroT, pageT, language }) {
+    const API_URL = import.meta.env.VITE_API_URL;
+
     const [newsProducts, setNewsProducts] = useState([]);
 
     const [currentPage, setCurrentPage] = useState(0);
@@ -11,7 +13,7 @@ function NewsPage({ heroT, pageT, language }) {
     const productsPerPage = 6;
 
     useEffect(() => {
-        fetch("https://mushukcha-style-backend.onrender.com/products/new-arrivals")
+        fetch(`${API_URL}/products/new-arrivals`)
             .then((res) => res.json())
             .then((data) => setNewsProducts(data || []))
             .catch(() => setNewsProducts([]));
@@ -52,7 +54,7 @@ function NewsPage({ heroT, pageT, language }) {
                                 <img
                                     src={
                                         product.imageUrl
-                                            ? `https://mushukcha-style-backend.onrender.com${product.imageUrl}`
+                                            ? `${API_URL}${product.imageUrl}`
                                             : "/no-image.png"
                                     }
                                     alt={product.name}

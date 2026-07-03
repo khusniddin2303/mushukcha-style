@@ -9,6 +9,8 @@ import hero4 from "../assets/hero/hero4.jpg";
 
 function HomePage({ t, language }) {
 
+    const API_URL = import.meta.env.VITE_API_URL;
+
     const slides = [
         hero1,
         hero2,
@@ -41,21 +43,21 @@ function HomePage({ t, language }) {
     }, [slides.length]);
 
     useEffect(() => {
-        fetch("https://mushukcha-style-backend.onrender.com/products/new-arrivals")
+        fetch(`${API_URL}/products/new-arrivals`)
             .then((res) => res.json())
             .then((data) => setNewProducts(data || []))
             .catch(() => setNewProducts([]));
     }, []);
 
     useEffect(() => {
-        fetch("https://mushukcha-style-backend.onrender.com/categories/featured")
+        fetch(`${API_URL}/categories/featured`)
             .then((res) => res.json())
             .then((data) => setCategories(data || []))
             .catch(() => setCategories([]));
     }, []);
 
     useEffect(() => {
-        fetch("https://mushukcha-style-backend.onrender.com/categories")
+        fetch(`${API_URL}/categories`)
             .then((res) => res.json())
             .then((data) => setAllCategories(data || []))
             .catch(() => setAllCategories([]));
@@ -298,7 +300,7 @@ function HomePage({ t, language }) {
                                     <img
                                         src={
                                             product.imageUrl
-                                                ? `https://mushukcha-style-backend.onrender.com${product.imageUrl}`
+                                                ? `${API_URL}${product.imageUrl}`
                                                 : "/no-image.png"
                                         }
                                         alt={product.name}

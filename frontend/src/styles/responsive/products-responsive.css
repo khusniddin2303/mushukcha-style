@@ -734,3 +734,93 @@
         padding: 10px 14px;
     }
 }
+
+/* FINAL MOBILE PRODUCT CARD FIX */
+@media (max-width: 768px) {
+    .products-page {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    .products-grid-section {
+        width: 100%;
+        min-height: auto !important;
+        overflow-x: hidden;
+    }
+
+    .products-grid,
+    .products-loading-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        width: calc(100% - 16px) !important;
+        margin: 0 auto !important;
+        gap: 18px !important;
+        align-items: start !important;
+    }
+
+    .products-card {
+        width: 100% !important;
+        min-width: 0 !important;
+        min-height: 0 !important;
+        height: auto !important;
+        align-self: start !important;
+        border-radius: 20px !important;
+        padding: 6px !important;
+        box-sizing: border-box !important;
+    }
+
+    .products-card-image {
+        width: 100% !important;
+        height: 155px !important;
+        object-fit: cover !important;
+        border-radius: 16px !important;
+        display: block !important;
+    }
+
+    .products-card-content {
+        padding: 10px !important;
+        text-align: center !important;
+        flex: initial !important;
+    }
+
+    .products-card-category {
+        width: 100% !important;
+        margin-bottom: 8px !important;
+        font-size: 9px !important;
+        padding: 6px 8px !important;
+        box-sizing: border-box !important;
+    }
+
+    .products-card-content h3 {
+        font-size: 15px !important;
+        line-height: 1.15 !important;
+        margin-bottom: 6px !important;
+    }
+
+    .products-card-description {
+        display: none !important;
+    }
+
+    .products-card-footer {
+        margin-top: 8px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 8px !important;
+    }
+
+    .products-card-footer p {
+        font-size: 15px !important;
+        text-align: center !important;
+    }
+
+    .products-card-footer button {
+        width: 100% !important;
+        height: 34px !important;
+        padding: 0 !important;
+        border-radius: 12px !important;
+        font-size: 12px !important;
+    }
+}
