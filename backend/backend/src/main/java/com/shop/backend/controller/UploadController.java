@@ -14,7 +14,8 @@ import java.util.UUID;
 @RequestMapping("/admin")
 public class UploadController {
 
-    private static final String UPLOAD_DIR = "uploads";
+    private static final String UPLOAD_DIR =
+            System.getenv().getOrDefault("UPLOAD_DIR", "uploads");
 
     @PostMapping("/upload")
     public Map<String, String> uploadFile(@RequestParam("file") MultipartFile file) throws IOException {
