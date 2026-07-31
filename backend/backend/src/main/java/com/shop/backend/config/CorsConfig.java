@@ -16,6 +16,8 @@ public class CorsConfig {
                 registry.addMapping("/**")
                         .allowedOrigins(
                                 "https://mushukcha-style.vercel.app",
+                                "https://mushukchastyle.uz",
+                                "https://www.mushukchastyle.uz",
                                 "http://localhost:5173"
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")

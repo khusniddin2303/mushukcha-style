@@ -55,6 +55,8 @@ public class SecurityConfig {
 
         configuration.addAllowedOrigin("http://localhost:5173");
         configuration.addAllowedOrigin("https://mushukcha-style.vercel.app");
+        configuration.addAllowedOrigin("https://mushukchastyle.uz");
+        configuration.addAllowedOrigin("https://www.mushukchastyle.uz");
         configuration.addAllowedHeader("*");
         configuration.addAllowedMethod("*");
         configuration.setAllowCredentials(true);
