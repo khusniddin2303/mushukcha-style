@@ -108,7 +108,7 @@ function AboutPage({ heroT, pageT, language }) {
                     <p>{pageT.ownerText}</p>
 
                     <div className="owner-socials">
-                        <a href="https://instagram.com/mushukcha_style" target="_blank" rel="noopener noreferrer">
+                        <a href="https://instagram.com/lady.fotima" target="_blank" rel="noopener noreferrer">
                             <FaInstagram />
                             Instagram
                         </a>
@@ -148,7 +148,7 @@ function AboutPage({ heroT, pageT, language }) {
                     <p>{pageT.developerText}</p>
 
                     <div className="developer-socials">
-                        <a href="https://instagram.com/mushukcha_style" target="_blank" rel="noopener noreferrer">
+                        <a href="https://instagram.com/nabiev_kh23" target="_blank" rel="noopener noreferrer">
                             <FaInstagram />
                         </a>
 
