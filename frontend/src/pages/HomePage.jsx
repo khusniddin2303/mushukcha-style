@@ -20,6 +20,7 @@ function HomePage({ t, language }) {
 
     const [currentSlide, setCurrentSlide] = useState(0);
     const [newProducts, setNewProducts] = useState([]);
+    const [totalProducts, setTotalProducts] = useState(0);
     const [newArrivalIndex, setNewArrivalIndex] = useState(0);
     const [categories, setCategories] = useState([]);
     const [allCategories, setAllCategories] = useState([]);
@@ -64,8 +65,17 @@ function HomePage({ t, language }) {
     }, []);
 
     useEffect(() => {
+        fetch(`${API_URL}/products?page=0&size=1&sort=newest`)
+            .then((res) => res.json())
+            .then((data) =>
+                setTotalProducts(data.totalItems || data.totalElements || 0)
+            )
+            .catch(() => setTotalProducts(0));
+    }, []);
+
+    useEffect(() => {
         if (
-            newProducts.length === 0 ||
+            totalProducts === 0 ||
             allCategories.length === 0
         ) {
             return;
@@ -79,7 +89,7 @@ function HomePage({ t, language }) {
                     let productStart = 0;
                     let categoryStart = 0;
 
-                    const productTarget = newProducts.length;
+                    const productTarget = totalProducts;
                     const categoryTarget = allCategories.length;
 
                     const productInterval = setInterval(() => {
@@ -113,7 +123,7 @@ function HomePage({ t, language }) {
         }
 
         return () => observer.disconnect();
-    }, [newProducts.length, allCategories.length]);
+    }, [totalProducts, allCategories.length]);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
